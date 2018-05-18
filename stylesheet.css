@@ -4,6 +4,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align:center;
 }
 
 #mainContainer {
@@ -17,7 +20,7 @@ body {
     min-width: 100vh;
 }
 #slotsContainer {  
-    background-color: wheat;  
+    background-color:steelblue;  
 }
 #slotsRow{
     min-height: 50vh;
@@ -32,12 +35,52 @@ footer {
     bottom: 0;
     width: 100%;
     min-width: 100vh;
-    min-height: 14vh;
-    max-height: 14vh;
-    background-color: wheat;
+    min-height: 16vh;
+    max-height: 16vh;
+    background-color:steelblue;
     color: white;
     text-align: center;
-
 }
+#menuButton {
+    background-image: url("assets/images/paytable-normal.png");
+}
+#soundButton {
+    background-image: url("assets/images/sound-normal.png");
+}
+#infoButton {
+    background-image: url("assets/images/info-normal.png");  
+}
+#forwardButton {
+    background-image: url("assets/images/quickspin-normal.png");
+    
+}
+.userbutton {
+    width: 7vh;
+    height: 7vh;
+    background-size: 100%;
+}
+#userBalance {
+border-style: solid;
+border-color:  #EAA83A;
+}
+.text {
+    font-weight: 600;
+    font-size: 3.5vh;
+}
+#increaseButton {
+    background-image: url("assets/images/plus-normal.png");
+}
+#decreaseButton {
+    background-image: url("assets/images/minus-normal.png");
+}
+#spinButton {
+    background-image: url("assets/images/spin-normal.png");
+    width: 7vh;
+    height: 7vh;
+    float: left;
+}
+
+
+
 
  

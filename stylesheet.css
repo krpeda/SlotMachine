@@ -1,0 +1,43 @@
+
+body {
+    background-image: url("assets/images/game-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.col-md-10 {
+    min-width: 100vh;
+}
+#slotsContainer {  
+    background-color: wheat;  
+}
+#slotsRow{
+    min-height: 50vh;
+}
+#userContainer {
+    background-color: red;
+    height: 30%;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 100vh;
+    min-height: 14vh;
+    max-height: 14vh;
+    background-color: wheat;
+    color: white;
+    text-align: center;
+
+}
+
+ 

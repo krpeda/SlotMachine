@@ -8,36 +8,41 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-<body>
-        <button   class="w3-button w3-circle userbutton" id="spinButton"></button>
+<body onload="init();">
+
+
     <div class="container " id="mainContainer">
+
         <div class="row" id="slotsRow">
             <div class="col-md-10">
                 <div id="slotsContainer" class="container border border-warning">
                     <div class="row" id="slotsRow">
                         <div class="col-sm-3">
-                            <canvas id="slotOne">
+                            <canvas class="slot" id="slotOne">
 
                             </canvas>
                         </div>
                         <div class="col-sm-3">
-                            <canvas id="slotTwo">
+                            <canvas class="slot" id="slotTwo">
 
                             </canvas>
                         </div>
                         <div class="col-sm-3">
-                            <canvas id="slotThree">
+                            <canvas class="slot" id="slotThree">
 
                             </canvas>
                         </div>
                         <div class="col-sm-3">
-                            <canvas id="slotFour">
+                            <canvas class="slot" id="slotFour">
 
                             </canvas>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <button class="w3-button w3-circle userbutton" id="spinButton"></button>
         </div>
     </div>
     <footer class="border border-warning">
@@ -48,10 +53,9 @@
                         </button/>
                         <button class="btn btn-info userbutton" id="soundButton">
                             </button/>
-                        
                 </div>
                 <div class="col-sm-2 text">
-                   <div>BALANCE</div>                
+                    <div>BALANCE</div>
                 </div>
                 <div class="col-sm-1 text">
                     <div>BET</div>
@@ -60,10 +64,12 @@
                     <button class="btn btn-info userbutton" id="increaseButton">
                 </div>
                 <div class="col-sm-2 text ">
-                    <div >TOTAL WIN</div>
+                    <div>TOTAL WIN</div>
                 </div>
-                <div class="col-sm-2 text ">                  
-                </div>               
+                <div id="gameLogo">
+                    <img  src="assets/images/game-logo.png" alt=""> 
+                </div>
+                              
             </div>
             <div style="padding:1px;" class="row">
                 <div class="col-sm-2 ">
@@ -81,7 +87,7 @@
                 </div>
                 <div class="col-sm-2 text ">
                     <div>0$</div>
-                </div>               
+                </div>
             </div>
         </div>
     </footer>
@@ -89,7 +95,7 @@
 
 
 
-
+    <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -97,6 +103,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
 </body>
 
 </html>

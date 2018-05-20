@@ -1,3 +1,5 @@
+
+
 function init() {
     stageOne = new PIXI.Container();
     stageTwo = new PIXI.Container();
@@ -104,22 +106,23 @@ function spin() {
     var userBalance = document.getElementById("userBalance");
     var balanceValue = parseInt(userBalance.getAttribute("value"), 10);
     var betValue = parseInt(totalBet.getAttribute("value"), 10);
-
+    
     if ( balanceValue >= betValue) {
         var newValue = balanceValue - betValue;
         userBalance.setAttribute("value", newValue);
         userBalance.innerHTML = newValue;
-        var timesRun = 0;
-
+        var timeRun = 0;
         var interval = window.setInterval(function () {
-            timesRun++;
-            if (timesRun == 30) {
+            timeRun++;
+            document.getElementById("spinButton").disabled = true;
+            if (timeRun == 30) {
                 clearInterval(interval);
+                document.getElementById("spinButton").disabled = false;
             }
             stageOne.position.y -= 30;
             stageTwo.position.y -= 25;
             stageThree.position.y -= 30;
-            stageFour.position.y -= 35;
+            stageFour.position.y -= 25;
             requestAnimationFrame(update);
         }, 50);
 

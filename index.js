@@ -68,7 +68,7 @@
     }
     
  }
- function update(i) {
+ function update() {
     
     
     slotOneRenderer.render(stageOne);
@@ -82,11 +82,11 @@
      for (let i = 0; i < 12; i++) {
         var element = array[Math.floor(Math.random() * array.length)]
         var symbol = PIXI.Texture.fromImage("assets/images/" + element.id);
-        sprite = new PIXI.extras.TilingSprite(symbol, 400, 336);    
-        sprite.tilePosition.y = 0;
+        sprite = new PIXI.extras.TilingSprite(symbol, 400, 336);
         sprite.position.y = Math.floor(i / 5) * 50;
         sprite.scale.x = 0.75;
-        sprite.scale.y = 0.15;
+        sprite.scale.y = 0.15;    
+        sprite.tilePosition.y = 0;     
         stage.addChild(sprite);   
         requestAnimationFrame(update);
         spriteArray.push(sprite);

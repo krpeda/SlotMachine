@@ -9,8 +9,6 @@
 </head>
 
 <body onload="init();">
-
-
     <div class="container " id="mainContainer">
 
         <div class="row" id="slotsRow">
@@ -32,7 +30,7 @@
                         <div class="col-sm-3 nopadding">
                             <canvas class="slot" id="slotFour">
                             </canvas>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,20 +61,20 @@
                     <div>TOTAL WIN</div>
                 </div>
                 <div id="gameLogo">
-                    <img style="height: 15vh;width: 60vh;"src="assets/images/game-logo.png" alt="">
+                    <img style="height: 15vh;width: 60vh;" src="assets/images/game-logo.png" alt="">
                 </div>
 
             </div>
             <div style="padding:1px;" class="row">
                 <div class="col-sm-2 ">
                     <button class="btn btn-info userbutton" id="forwardButton"></button>
-                    <button class="btn btn-info userbutton" id="infoButton"></button>
+                    <button class="btn btn-info userbutton" id="infoButton" onclick="info();"></button>
                 </div>
                 <div class="col-sm-2 text">
                     <div id="userBalance" value="1000"> 1000 </div>
                 </div>
                 <div class="col-sm-1 text">
-                    <div id="totalBet" value="0"> 0</div>
+                    <div id="totalBet" value="10"> 10</div>
                 </div>
                 <div class="col-sm-1 ">
                     <button class="btn btn-info userbutton" id="decreaseButton" onclick="decrease();"></button>

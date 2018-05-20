@@ -86,6 +86,7 @@ border-color:  #EAA83A;
 #gameLogo {
     height: 3vh;
     width: 5vh;
+    padding-left: 7vh;
     float: right;   
 }
 .slot {

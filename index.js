@@ -28,7 +28,7 @@ function init() {
             view: document.getElementById("slotFour")
         }
     );
-
+    //array of all picture ids
     symbolArray = [{
             id: 'symbol1.png'
         },
@@ -76,7 +76,7 @@ function update() {
     slotFourRenderer.render(stageFour);
     requestAnimationFrame(update);
 }
-
+//create sprites for each reel
 function startCreation() {
     var stageArray = [stageOne, stageTwo, stageThree, stageFour];
     for (let i = 0; i < stageArray.length; i++) {
@@ -85,8 +85,10 @@ function startCreation() {
     requestAnimationFrame(update);
 }
 
+//create sprites from symbols
 function createTextures(array, stage) {
     for (let i = 0; i < 60; i++) {
+        //random picture array element
         var element = array[Math.floor(Math.random() * array.length)]
         sprite = new PIXI.Sprite(loader.resources["assets/images/" + element.id].texture);
         sprite.position.y = Math.floor(i % 60) * 50; 
@@ -95,9 +97,9 @@ function createTextures(array, stage) {
         stage.addChild(sprite);
         requestAnimationFrame(update);
     };
-    console.log(stage.children); //amount of symbols 
+    console.log(stage.children); //amount of sprites made
 }
-
+// update balance value and spin reels
 function spin() {
     var userBalance = document.getElementById("userBalance");
     var balanceValue = parseInt(userBalance.getAttribute("value"), 10);
@@ -126,7 +128,7 @@ function spin() {
     }
 
 }
-
+//increase bet value
 function increase() {
     var totalBet = document.getElementById("totalBet");
     var newValue = parseInt(totalBet.getAttribute("value"), 10) + 10;
@@ -135,7 +137,7 @@ function increase() {
         totalBet.innerHTML = newValue;
     }
 }
-
+//decrease bet value
 function decrease() {
     var totalBet = document.getElementById("totalBet");
     var value = parseInt(totalBet.getAttribute("value"), 10);
@@ -146,6 +148,7 @@ function decrease() {
     }
 
 }
+//author
 function info() {
     alert("Made by Kristjan Erik Pedak (20.05.2018");
 }

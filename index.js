@@ -153,5 +153,5 @@ function decrease() {
 }
 //author
 function info() {
-    alert("Made by Kristjan Erik Pedak (20.05.2018");
+    alert("Author : Kristjan Erik Pedak (20.05.2018");
 }
